@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -28,11 +29,53 @@ func readInput(filename string) []string {
 }
 
 func part1(lines []string) int {
-	// TODO: implement
-	return 0
+	password := 0
+	current := 50
+
+	for _, item := range lines {
+		direction := item[0]
+		number, _ := strconv.Atoi(item[1:])
+		switch direction {
+		case 'L':
+			current = (current - number + 100) % 100
+		case 'R':
+			current = (current + number) % 100
+		}
+		if current == 0 {
+			password++
+		}
+	}
+	return password
 }
 
 func part2(lines []string) int {
-	// TODO: implement
-	return 0
+	password := 0
+	current := 50
+
+	for _, item := range lines {
+		direction := item[0]
+		number, _ := strconv.Atoi(item[1:])
+
+		start := current
+		password += number / 100
+		remainder := number % 100
+
+		switch direction {
+		case 'L':
+			current = (current - remainder + 100) % 100
+			if remainder >= start && start > 0 {
+				password++
+			} else if current == 0 {
+				password++
+			}
+		case 'R':
+			current = (current + remainder) % 100
+			if start+remainder > 100 {
+				password++
+			} else if current == 0 {
+				password++
+			}
+		}
+	}
+	return password
 }
