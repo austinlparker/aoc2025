@@ -1,0 +1,16 @@
+# Input files (don't share puzzle inputs per AoC rules)
+input.txt
+*.input
+
+# Binaries
+/day*/day*
+*.exe
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
