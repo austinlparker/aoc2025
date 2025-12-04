@@ -4,9 +4,18 @@ import "testing"
 
 func TestPart1(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"..@@.@@@@.",
+		"@@@.@.@.@@",
+		"@@@@@.@.@@",
+		"@.@@@@..@.",
+		"@@.@@@@.@@",
+		".@@@@@@@.@",
+		".@.@.@.@@@",
+		"@.@@@.@@@@",
+		".@@@@@@@@.",
+		"@.@.@@@.@.",
 	}
-	expected := 0 // TODO: expected result
+	expected := 13
 	result := part1(input)
 	if result != expected {
 		t.Errorf("part1() = %d, want %d", result, expected)
@@ -15,9 +24,18 @@ func TestPart1(t *testing.T) {
 
 func TestPart2(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"..@@.@@@@.",
+		"@@@.@.@.@@",
+		"@@@@@.@.@@",
+		"@.@@@@..@.",
+		"@@.@@@@.@@",
+		".@@@@@@@.@",
+		".@.@.@.@@@",
+		"@.@@@.@@@@",
+		".@@@@@@@@.",
+		"@.@.@@@.@.",
 	}
-	expected := 0 // TODO: expected result
+	expected := 43
 	result := part2(input)
 	if result != expected {
 		t.Errorf("part2() = %d, want %d", result, expected)
