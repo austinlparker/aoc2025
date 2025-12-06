@@ -4,9 +4,12 @@ import "testing"
 
 func TestPart1(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"123 328  51 64",
+		"45 64  387 23",
+		"6 98  215 314",
+		"*   +   *   +",
 	}
-	expected := 0 // TODO: expected result
+	expected := 4277556
 	result := part1(input)
 	if result != expected {
 		t.Errorf("part1() = %d, want %d", result, expected)
@@ -15,9 +18,12 @@ func TestPart1(t *testing.T) {
 
 func TestPart2(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"123 328  51 64 ",
+		" 45 64  387 23 ",
+		"  6 98  215 314",
+		"*   +   *   +  ",
 	}
-	expected := 0 // TODO: expected result
+	expected := 3263827
 	result := part2(input)
 	if result != expected {
 		t.Errorf("part2() = %d, want %d", result, expected)
