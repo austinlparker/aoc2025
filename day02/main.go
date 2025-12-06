@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 	"strconv"
@@ -15,18 +14,11 @@ func main() {
 }
 
 func readInput(filename string) []string {
-	file, err := os.Open(filename)
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
-
-	var lines []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	return lines
+	return strings.Split(strings.TrimSuffix(string(data), "\n"), "\n")
 }
 
 func part1(lines []string) int {
