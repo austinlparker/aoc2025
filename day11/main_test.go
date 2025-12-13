@@ -4,9 +4,18 @@ import "testing"
 
 func TestPart1(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"aaa: you hhh",
+		"you: bbb ccc",
+		"bbb: ddd eee",
+		"ccc: ddd eee fff",
+		"ddd: ggg",
+		"eee: out",
+		"fff: out",
+		"ggg: out",
+		"hhh: ccc fff iii",
+		"iii: out",
 	}
-	expected := 0 // TODO: expected result
+	expected := 5
 	result := part1(input)
 	if result != expected {
 		t.Errorf("part1() = %d, want %d", result, expected)
@@ -15,9 +24,21 @@ func TestPart1(t *testing.T) {
 
 func TestPart2(t *testing.T) {
 	input := []string{
-		// TODO: add example input
+		"svr: aaa bbb",
+		"aaa: fft",
+		"fft: ccc",
+		"bbb: tty",
+		"tty: ccc",
+		"ccc: ddd eee",
+		"ddd: hub",
+		"hub: fff",
+		"eee: dac",
+		"dac: fff",
+		"fff: ggg hhh",
+		"ggg: out",
+		"hhh: out",
 	}
-	expected := 0 // TODO: expected result
+	expected := 2
 	result := part2(input)
 	if result != expected {
 		t.Errorf("part2() = %d, want %d", result, expected)
